@@ -42,16 +42,6 @@ class ChatView(ctk.CTkFrame):
         self._style_chat_scrollbar()
         self._bind_chat_mousewheel()
 
-        # 3.Input Bar
-        # input_container = ctk.CTkFrame(
-        #     self,
-        #     fg_color="#2f2f2f",
-        #     border_color="#383838",
-        #     border_width=1,
-        #     corner_radius=24,
-        # )
-        # input_container.pack(fill="x", padx=40, pady=(10, 20))
-
         # Text Entry
         self.entry = ctk.CTkEntry(
             self,
@@ -69,25 +59,9 @@ class ChatView(ctk.CTkFrame):
         )
         self.entry.bind("<Return>", lambda e: self.send_message())
 
-        # # Send Button
-        # self.btn_send = ctk.CTkButton(
-        #     input_container,
-        #     text="▲",
-        #     font=(Theme.FONT_FAMILY, 14, "bold"),
-        #     width=38,
-        #     height=38,
-        #     corner_radius=19,
-        #     fg_color="#ffffff",
-        #     text_color="#000000",
-        #     hover_color="#e5e5e5",
-        #     command=self.send_message,
-        # )
-
-        # self.btn_send.pack(side="right", padx=(0, 8))
-
         # Welcome message
         self.add_message(
-            "Agent Mini",
+            "Agent",
             I18n.t("welcome_msg"),
             is_user=False,
         )

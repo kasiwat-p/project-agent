@@ -112,7 +112,7 @@ class ChatBubble(ctk.CTkFrame):
         )
         self.full_text = text
 
-        prefix = "You" if is_user else "Agent Mini"
+        prefix = "You" if is_user else "Agent"
         header = ctk.CTkFrame(self, fg_color="transparent")
         header.pack(fill="x", padx=12, pady=(10, 4))
 

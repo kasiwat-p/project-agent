@@ -13,7 +13,7 @@ from ui.views.plan_view import PlanView
 from ui.views.settings_view import SettingsView
 
 try:
-    myappid = "myproject.projectagent.app.1.0"
+    myappid = "projectagent.app.1.0"
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 except Exception:
     pass
@@ -80,7 +80,7 @@ class App(ctk.CTk):
 
         ctk.CTkLabel(
             brand_frame,
-            text="⚡ Agent",
+            text="⚡Project Agent",
             font=(Theme.FONT_FAMILY, 20, "bold"),
             text_color="#ffffff",
             anchor="w",

@@ -380,7 +380,7 @@ class SettingsView(ctk.CTkFrame):
         self.refresh_keys_list()
 
     def refresh_keys_list(self):
-        for w in self.key_widgets:
+        for w in self.keys_list_frame.winfo_children():
             w.destroy()
         self.key_widgets.clear()
 
@@ -388,12 +388,14 @@ class SettingsView(ctk.CTkFrame):
         active_idx = self.config_mgr.config.get("active_key_index", 0)
 
         if not keys:
-            ctk.CTkLabel(
+            lbl = ctk.CTkLabel(
                 self.keys_list_frame,
                 text=I18n.t("no_keys_text"),
                 font=(Theme.FONT_FAMILY, 13),
                 text_color=Theme.TEXT_MUTED,
-            ).pack(pady=10)
+            )
+            lbl.pack(pady=10)
+            self.key_widgets.append(lbl)
             return
 
         for idx, k in enumerate(keys):

@@ -3,6 +3,7 @@ import os
 import threading
 from pathlib import Path
 from datetime import datetime
+import sys
 
 from google import genai
 from google.genai import types
@@ -17,7 +18,13 @@ from core.llm_client import (
     validate_openrouter_key,
 )
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+if getattr(sys, "frozen", False):
+    # .exe
+    BASE_DIR = Path(sys.executable).parent
+else:
+    # Root Directory
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
 CONFIG_FILE = BASE_DIR / "config.json"
 ENV_FILE = BASE_DIR / ".env"
 DEFAULT_MODEL = "gemini-3.5-flash-lite"

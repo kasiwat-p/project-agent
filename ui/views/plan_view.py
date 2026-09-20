@@ -44,7 +44,13 @@ class PlanView(ctk.CTkFrame):
         self.lbl_exec_status.pack(side="right", padx=(0, 10))
 
         # 2. Plan Info Card
-        self.info_card = ctk.CTkFrame(self, fg_color="#2f2f2f", border_color="#383838", border_width=1, corner_radius=10)
+        self.info_card = ctk.CTkFrame(
+            self,
+            fg_color="#2f2f2f",
+            border_color="#383838",
+            border_width=1,
+            corner_radius=10,
+        )
         self.info_card.pack(fill="x", padx=20, pady=5)
 
         self.lbl_goal = ctk.CTkLabel(
@@ -128,14 +134,14 @@ class PlanView(ctk.CTkFrame):
         self.lbl_exec_status.configure(text=text)
         running_tokens = (
             "executing",
-            "agent loop",
-            "agent thinking",
+            "agent_loop",
+            "agent_thinking",
             "analyzing",
             "scouting",
-            "waiting for user approval",
-            "running ",
-            "กำลังทำ",
-            "กำลังปรับปรุง",
+            "waiting_for_user_approval",
+            "running",
+            "in_progress",
+            "updating",
             "summarizing",
         )
         if any(token in text.lower() for token in running_tokens):
@@ -146,7 +152,9 @@ class PlanView(ctk.CTkFrame):
     def mark_finished(self):
         self.btn_proceed.configure(state="disabled", text=I18n.t("proceed_done"))
 
-    def add_approval_card(self, step_idx: int, tool_name: str, tool_args: dict, approve_fn, reject_fn):
+    def add_approval_card(
+        self, step_idx: int, tool_name: str, tool_args: dict, approve_fn, reject_fn
+    ):
         self.clear_approval()
         self.approval_host.pack(fill="x", padx=20, pady=8, after=self.info_card)
 
