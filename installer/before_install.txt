@@ -1,0 +1,18 @@
+Welcome to the Project Agent Setup Wizard!
+Please read the following information before proceeding with the installation:
+
+1. System Requirements:
+   - Operating System: Windows 10 / Windows 11 (64-bit)
+   - Internet Connection: Required for AI API communication
+
+2. Prerequisites:
+   - This application requires an API Key to process requests. Supported providers:
+     * Google Gemini API Key
+     * OpenRouter API Key
+   - You can obtain a free API Key from Google AI Studio or OpenRouter.
+
+3. Security Notice (Windows SmartScreen):
+   - If Windows SmartScreen displays a "Windows protected your PC" warning on first launch, 
+     click "More info" and select "Run anyway" to open the application.
+
+Click "Next" to continue with the installation.

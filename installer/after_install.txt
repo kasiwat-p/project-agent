@@ -1,0 +1,21 @@
+Installation completed successfully!
+Please follow these steps when launching the app for the first time:
+
+Step 1: Set Up Your API Key
+1. Open Project Agent and navigate to "API Keys & Settings" on the left menu.
+2. Under "Add New API Key", select your preferred Provider:
+   - Google Gemini
+   - OpenRouter
+3. Paste your API Key in the "Enter API Key" field.
+4. Add a label (e.g., Primary, Backup) and click "Save Key".
+
+Step 2: Configure Preferences
+1. Primary Model: Select your default model (e.g., gemini-3.5-flash-lite).
+2. App Language: Choose your preferred display language (Thai / English).
+3. Workspace Folder: Choose a local folder for the AI to read/write project files.
+
+Step 3: Start Using Project Agent
+- "Chat & Agent": Chat, ask questions, or request code generation.
+- "Plan & Steps": Review and inspect multi-step task execution plans.
+
+Enjoy using Project Agent!
