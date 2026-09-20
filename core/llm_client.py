@@ -101,8 +101,7 @@ class OpenRouterClient:
             headers={
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
-                # แก้
-                "HTTP-Referer": "https://github.com/antigravity-agent",
+                "HTTP-Referer": "https://github.com/kasiwatofficial-dev/project-agent",
                 "X-Title": "Project Agent",
             },
         )
